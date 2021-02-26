@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Campground = require('./models/campground');
 const methodOverride = require('method-override');
+const ejsMate = require('ejs-mate');
 const PORT = 5000 || process.env;
 const path = require('path')
 
@@ -24,6 +25,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'));
 
 //ejs setup
+app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
 
