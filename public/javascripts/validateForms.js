@@ -3,7 +3,7 @@
 		'use strict'
 
 		// Fetch all the forms we want to apply custom Bootstrap validation styles to
-		const forms = document.querySelectorAll('.validatedForm')
+		const forms = document.querySelectorAll('.validate-form')
 
 		// Loop over them and prevent submission
 		Array.from(forms)

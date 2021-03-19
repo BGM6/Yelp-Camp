@@ -1,3 +1,12 @@
+//This runs while in dev mode
+if(process.env.NODE_ENV !== 'production') {
+		require('dotenv').config();
+}
+
+// console.log(process.env.CLOUDINARY_CLOUD_NAME);
+// console.log(process.env.CLOUDINARY_KEY)
+// console.log(process.env.CLOUDINARY_SECRET)
+
 const PORT = 5000 || process.env;
 const express = require('express');
 const path = require('path');
